@@ -2,10 +2,33 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
 }
+
+.logo {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* typing cursor effect */
+.cursor {
+  display: inline-block;
+  width: 0.1em;
+  height: 1.1em;
+  background-color: black;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -252,6 +275,7 @@ section {
 
 .btn-color-2 {
   background: none;
+  flex-grow: 0.2
 }
 
 .btn-color-2:hover {
