@@ -556,4 +556,24 @@ a:hover {
   mix-blend-mode: multiply;
   z-index: 10;
 }
+
+#robot {
+  flex: 1;
+  padding: 20px;
+}
+
+#contact {
+  flex: 2;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  #robot, #contact {
+    flex: 1 1 100%;
+  }
 }
