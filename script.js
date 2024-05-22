@@ -61,4 +61,32 @@ document.addEventListener('DOMContentLoaded', function() {
   kinet.on('end', function() {
     console.log('end');
   });
+
+  // EmailJS Initialization
+  (function() {
+    emailjs.init('GCRVLHPwnhmgMPkw3'); // Replace with your actual user ID
+  })();
+
+  const btn = document.getElementById('button');
+
+  document.getElementById('contact-form')
+    .addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      btn.value = 'Sending...';
+
+      const serviceID = 'service_3767v2o'; // Replace with your actual service ID
+      const templateID = 'template_oxj02w1'; // Replace with your actual template ID
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Send';
+          alert('Sent!');
+        }, (err) => {
+          btn.value = 'Send';
+          alert(JSON.stringify(err));
+        });
+    });
 });
+
+

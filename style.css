@@ -418,9 +418,8 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: 0.1rem solid rgb(163, 163, 163);
+  background-color: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -437,11 +436,19 @@ article .icon {
   font-size: larger;
 }
 
+.contact-me-button {
+  border: 0.1rem solid rgb(53, 53, 53);
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
 
-
-    .contact-me-button:hover {
-        background-color: #FFA07A; /* Lighter shade of orange on hover */
-    }
+.contact-me-button:hover {
+  cursor: pointer;
+  background-color: #FFA07A; /* Lighter shade of orange on hover */
+}
 
 .contact-icon {
   cursor: default;
@@ -449,6 +456,46 @@ article .icon {
 
 .email-icon {
   height: 2.5rem;
+}
+
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 2rem; /* Match rounded structures */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: rgb(53, 53, 53) 0.1rem solid; /* Match border style */
+  padding: 20px; /* Add padding for space between container and text boxes */
+}
+
+.contact-form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: calc(100% - 20px); /* Adjust width to account for padding */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form-container button {
+  padding: 10px 20px;
+  background-color: rgb(53, 53, 53); /* Match other buttons */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.contact-form-container button:hover {
+  background-color: rgb(0, 0, 0); /* Match hover effect of other buttons */
 }
 
 /* FOOTER SECTION */
@@ -508,4 +555,5 @@ a:hover {
   pointer-events: none;
   mix-blend-mode: multiply;
   z-index: 10;
+}
 }
