@@ -17,20 +17,18 @@ function typeWriter() {
   type();
 }
 
+// Toggle menu function
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
+
 // Wrap the code in a DOMContentLoaded event listener to ensure it runs after the HTML is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
   // Call typeWriter function when DOM content is loaded
   typeWriter();
-
-
-
-  //toggle
-  function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-  }
 
   // create instance of kinet with custom settings
   var kinet = new Kinet({
@@ -88,5 +86,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
 
