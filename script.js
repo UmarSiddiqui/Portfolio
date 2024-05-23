@@ -3,17 +3,17 @@ function typeWriter() {
   const text = "Umar Siddiqui";
   const speed = 80; // Adjust typing speed (milliseconds)
   let i = 0;
-  const logoElement = document.querySelector(".logo");
+  const titleElement = document.querySelector(".title");
 
   function type() {
     if (i < text.length) {
-      logoElement.innerHTML += text.charAt(i);
+      titleElement.innerHTML += text.charAt(i);
       i++;
       setTimeout(type, speed);
-    } else {
-      cursorElement.style.display = "none"; // Hide cursor when typing is complete
     }
   }
+
+  titleElement.innerHTML = ""; // Clear the title before typing
   type();
 }
 
