@@ -32,7 +32,9 @@
  
 body {
   font-family: "Poppins", sans-serif;
+
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -159,14 +161,7 @@ a:hover {
 
 .hamburger-icon span:first-child {
   transform: none;
-}
-
-.hamburger-icon span:first-child {
   opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
 }
 
 /* SECTIONS */
@@ -592,3 +587,4 @@ a:hover {
     flex: 1 1 100%;
   }
 }
+
