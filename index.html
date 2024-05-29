@@ -12,6 +12,7 @@
   <body>
     <nav id="desktop-nav">
       <div class="logo">Umar Siddiqui</div>
+
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -41,10 +42,11 @@
       <div class="section__pic-container">
         <img src="./assets/GuyHead.png" alt="Umar Siddiqui profile picture" />
       </div>
+
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Umar Siddiqui</h1>
-        <p class="section__text__p2">Junior Software Developer</p>
+        <p class="section__text__p2" id="logo" >Junior Software Developer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -52,10 +54,17 @@
           >
             Download CV
           </button>
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/recommendation .pdf')"
+          >
+            Recomendation Letter
+          </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
-        </div>
+
+          </div>
         <div id="socials-container">
           <img
             src="./assets/linkedin.png"
@@ -72,6 +81,7 @@
         </div>
       </div>
     </section>
+
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -88,7 +98,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>1 year <br />Frontend Development</p>
+              <p>1 year <br />Software Development</p>
             </div>
             <div class="details-container">
               <img
@@ -97,7 +107,9 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />Software Development</p>
+              <p>
+                Bachelor of Information Technology<br />Software Development
+              </p>
             </div>
           </div>
           <div class="text-container">
@@ -119,6 +131,9 @@
         onclick="location.href='./#experience'"
       />
     </section>
+
+
+
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Skills</h1>
@@ -289,8 +304,91 @@
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
+
+
+
       <div class="experience-details-container">
         <div class="about-containers">
+          <!-- Project 1  Start -->
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/estore.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              E-commerce Website
+            </h2>
+
+            <div class="project-description">
+            <p>
+              E-commerce website for a Small Handicraft business, with paypal integration
+            </p>
+            <div class="techstack-icons">
+              <img src="./assets/html-icon.png" alt="HTML icon" class="icon" />
+              <img src="./assets/css-icon.png" alt="CSS icon" class="icon" />
+              <img src="./assets/javascript-icon.png" alt="JavaScript icon" class="icon" />
+              <img src="./assets/paypal-icon.png" alt="PayPal icon" class="icon" />
+            </div>
+            </div>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/UmarSiddiqui/E-commerce-website'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://serenhandicraft.netlify.app/index.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 1  End -->
+
+          <!-- Project 2  Start -->
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Alpha.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Alpha- 3D game inspired by Diablo
+            </h2>
+            <div class="project-description">
+              <p>
+                Alpha is a 3D game prototype inspired by Diablo,
+                You can download and play the game !
+              </p>
+              <div class="techstack-icons">
+                <img src="./assets/csharp-icon.png" alt="C#" class="icon" />
+                <img src="./assets/unity-icon.png" alt="Unity" class="icon" />
+              </div>
+            </div>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2"
+                onclick="window.open('./assets/Alpha.zip')"
+              >
+                Download and Play :)
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2  Ennd -->
+
+          <!-- Project 3  Start -->
+
           <div class="details-container color-container">
             <div class="article-container">
               <img
@@ -300,6 +398,17 @@
               />
             </div>
             <h2 class="experience-sub-title project-title">RoomEase</h2>
+            <div class="project-description">
+            <p>
+            "RoomEase" is a web application designed to help housemates manage their shared expenses, assign chores, and facilitate communication within a household. Under Construction !
+            </p>
+            <div class="techstack-icons">
+              <img src="./assets/csharp-icon.png" alt="C#" class="icon" />
+              <img src="./assets/dotnet-icon.png" alt=".NET" class="icon" />
+              <img src="./assets/vuejs-icon.png" alt="VueJS" class="icon" />
+              <img src="./assets/aws-icon.png" alt="AWS" class="icon" />
+            </div>
+            </div>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -315,56 +424,8 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/ecom.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              E-commerce Website
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/UmarSiddiqui/sereneHandicrafts'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/spotify.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Spotify Clone</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+
+          <!-- Project 3  End -->
         </div>
       </div>
       <img
@@ -374,9 +435,40 @@
         onclick="location.href='./#contact'"
       />
     </section>
+  </section>
+
+  <section id="robot">
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.3.8/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/DL8qzYGE924AyU-r/scene.splinecode"></spline-viewer>
+
+  </section>
+
+
+
+
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
+      <p class="section__text__p1">Drop a quick  message here ↓</p>
       <h1 class="title">Contact Me</h1>
+      <div class="contact-form-container">
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="from_name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="from_email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit" id="button" class="btn btn-color-1">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact">
+    
+    
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
@@ -403,7 +495,21 @@
           </p>
         </div>
       </div>
+  
+      <div class="btn-container">
+        <div class="btn-container">
+          <button
+            class="btn-color-1"
+            onclick="window.location.href='https://forms.visme.co/formsPlayer/dm0p1zo1-contact-me-form'"
+          >
+            Animated Contact Me ! :)
+          </button>
+        </div>
+      </div>
     </section>
+
+    <!--  EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <footer>
       <nav>
