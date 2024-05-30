@@ -422,6 +422,16 @@ article .icon {
   margin-top: 10px;
 }
 
+.techstack-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Adjust spacing between icons */
+  flex-wrap: wrap; /* Allow icons to wrap to next line on smaller screens */
+}
+
+
+
+
 /* CONTACT */
 
 #contact {
