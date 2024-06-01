@@ -10,6 +10,9 @@
   #projects {
     height: fit-content;
   }
+  .details-container {
+    height: auto; /* Adjust height for smaller screens */
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -44,6 +47,9 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+  .details-container {
+    height: auto; /* Adjust height for smaller screens */
   }
 }
 
@@ -99,5 +105,90 @@
   }
   .text-container {
     text-align: justify;
+  }
+  .details-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: auto; /* Adjust height for smaller screens */
+  }
+  .article-container {
+    width: 100%;
+  }
+}
+
+/* Base styles for the experience section */
+.experience-details-container-xp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.details-container-xp, .details-container-sk {
+  flex: 1 1 45%;
+  margin: 10px;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.article-container-xp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+.article-container-xp article {
+  display: flex;
+  align-items: center;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+  flex-direction: row; /* Ensure icon and description are side by side */
+}
+
+.article-container-xp article img {
+  margin-right: 10px; /* Adjust margin to keep icon and text together */
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1400px) {
+  .experience-details-container-xp {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #experience,
+  .experience-details-container-xp {
+    margin-top: 2rem;
+  }
+  .details-container-xp, .details-container-sk {
+    flex: 1 1 100%;
+  }
+  .article-container-xp article {
+    flex: 1 1 45%; /* Ensure articles take up half the width */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .article-container-xp article {
+    width: 100%;
+  }
+  article {
+    font-size: 1rem;
   }
 }

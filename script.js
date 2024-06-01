@@ -87,3 +87,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.getElementById('back-to-top').addEventListener('click', function(event) {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Add this code to load the Spline Viewer script lazily
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const script = document.createElement("script");
+        script.type = "module";
+        script.src = "https://unpkg.com/@splinetool/viewer@1.4.7/build/spline-viewer.js";
+        document.body.appendChild(script);
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  observer.observe(document.querySelector(".responsive-spline"));
+});
