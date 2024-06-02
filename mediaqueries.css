@@ -1,4 +1,4 @@
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 2000px) {
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
@@ -162,7 +162,7 @@
 }
 
 /* Media queries for responsiveness */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 2000px) {
   .experience-details-container-xp {
     flex-wrap: wrap;
   }
@@ -190,5 +190,11 @@
   }
   article {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #robot, #contact {
+    flex: 1 1 100%;
   }
 }

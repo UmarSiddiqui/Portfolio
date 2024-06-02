@@ -631,13 +631,11 @@ h1 {
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-  #robot, #contact {
-    flex: 1 1 100%;
-  }
-}
 
-/* style.css or mediaqueries.css */
+
+ 
+/* lottie-container */
+
 .lottie-container {
   display: flex;
   justify-content: center;
