@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // select circle element
   var circle = document.getElementById('circle');
-
+  if (circle) {
   // set handler on kinet tick event
   kinet.on('tick', function(instances) {
     circle.style.transform = `translate3d(${instances.x.current}px, ${instances.y.current}px, 0) rotateX(${instances.x.velocity / 2}deg) rotateY(${instances.y.velocity / 2}deg)`;
@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     kinet.animate('x', event.clientX - window.innerWidth/2);
     kinet.animate('y', event.clientY - window.innerHeight/2);
   });
+  }
 
   // log
   kinet.on('start', function() {
