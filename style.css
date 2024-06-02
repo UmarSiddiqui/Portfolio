@@ -401,17 +401,23 @@ article .icon {
 
 #projects {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  flex: 1 1 22%; /* Adjust the flex property to ensure a 4x4 grid */
+  margin: 1rem; /* Add margin for spacing between containers */
+  box-sizing: border-box;
 }
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: auto;
 }
 
 .project-title {
