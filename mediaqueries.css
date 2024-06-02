@@ -2,6 +2,7 @@
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
+    max-height: 100vh; /* Set the maximum height */
   }
   .about-containers {
     flex-wrap: wrap;
@@ -9,6 +10,7 @@
   #contact,
   #projects {
     height: fit-content;
+    margin-top: 6rem; /* Add margin to separate from the previous section */
   }
   .details-container {
     height: auto; /* Adjust height for smaller screens */
