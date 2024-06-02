@@ -1,4 +1,4 @@
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 3000px) {
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
@@ -17,7 +17,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   #desktop-nav {
     display: none;
   }
@@ -198,5 +198,44 @@
 @media (max-width: 768px) {
   #robot, #contact {
     flex: 1 1 100%;
+  }
+}
+
+/* Base styles for the project container */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styles for individual project cards */
+.project-card {
+  flex: 1 1 22%; /* Adjust the width to fit four cards in one row */
+  margin: 1rem;
+  box-sizing: border-box;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 3000px) {
+  .project-container {
+    flex-wrap: nowrap; /* Ensure all projects are in one row */
+  }
+  .project-card {
+    flex: 1 1 22%; /* Adjust the width to fit four cards in one row */
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .project-container {
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  .project-card {
+    flex: 1 1 45%; /* Adjust the width to fit two cards in one row */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%; /* Adjust the width to fit one card in one row */
   }
 }

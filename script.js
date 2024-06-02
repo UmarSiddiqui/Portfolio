@@ -40,16 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // select circle element
   var circle = document.getElementById('circle');
   if (circle) {
-  // set handler on kinet tick event
-  kinet.on('tick', function(instances) {
-    circle.style.transform = `translate3d(${instances.x.current}px, ${instances.y.current}px, 0) rotateX(${instances.x.velocity / 2}deg) rotateY(${instances.y.velocity / 2}deg)`;
-  });
+    // set handler on kinet tick event
+    kinet.on('tick', function(instances) {
+      circle.style.transform = `translate3d(${instances.x.current}px, ${instances.y.current}px, 0) rotateX(${instances.x.velocity / 2}deg) rotateY(${instances.y.velocity / 2}deg)`;
+    });
 
-  // call kinet animate method on mousemove
-  document.addEventListener('mousemove', function (event) {
-    kinet.animate('x', event.clientX - window.innerWidth/2);
-    kinet.animate('y', event.clientY - window.innerHeight/2);
-  });
+    // call kinet animate method on mousemove
+    document.addEventListener('mousemove', function (event) {
+      kinet.animate('x', event.clientX - window.innerWidth/2);
+      kinet.animate('y', event.clientY - window.innerHeight/2);
+    });
   }
 
   // log
@@ -88,10 +88,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.getElementById('back-to-top').addEventListener('click', function(event) {
-  event.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+const backToTopButton = document.getElementById('back-to-top');
+if (backToTopButton) {
+  backToTopButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // Add this code to load the Spline Viewer script lazily
 document.addEventListener("DOMContentLoaded", function () {
@@ -107,5 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  observer.observe(document.querySelector(".responsive-spline"));
+  const responsiveSpline = document.querySelector(".responsive-spline");
+  if (responsiveSpline) {
+    observer.observe(responsiveSpline);
+  }
 });
