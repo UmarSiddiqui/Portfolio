@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // EmailJS Initialization
   (function() {
-    emailjs.init('GCRVLHPwnhmgMPkw3'); // Replace with your actual user ID
+    emailjs.init('GCRVLHPwnhmgMPkw3'); 
   })();
 
   const btn = document.getElementById('button');
@@ -74,13 +74,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       btn.value = 'Sending...';
 
-      const serviceID = 'service_3767v2o'; // Replace with your actual service ID
-      const templateID = 'template_oxj02w1'; // Replace with your actual template ID
-
+      const serviceID = 'service_3767v2o'; 
+      const templateID = 'template_oxj02w1';
       emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
           btn.value = 'Send';
           alert('Sent!');
+          this.reset(); // Clear the form fields
         }, (err) => {
           btn.value = 'Send';
           alert(JSON.stringify(err));
