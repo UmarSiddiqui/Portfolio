@@ -15,6 +15,17 @@
   white-space: nowrap;
 }
 
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo a:hover {
+  transform: scale(1.1);
+  color: #ff6347; 
+}
+
 /* typing cursor effect */
 .cursor {
   display: inline-block;
