@@ -128,3 +128,15 @@ document.addEventListener("DOMContentLoaded", function () {
         a.appendChild(r);
     })
     (window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+
+    
+//global navbar
+
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('.global-nav');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
